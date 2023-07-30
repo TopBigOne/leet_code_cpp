@@ -1,12 +1,12 @@
 #include <iostream>
-#include <string>
+#include "Solution.h"
 
 #include <vector>
 
 using namespace std;
 
 //最长回文子串 : https://leetcode.cn/problems/longest-palindromic-substring/
-class Solution {
+class Solution1 {
 public:
     string longestPalindrome(string s) {
         size_t len = s.size();
@@ -17,10 +17,10 @@ public:
 
         for (int i = 0; i < len; i++) {
             vector<int> old = centerSpread(s, i, i);
-            printVector("old", old);
+           // printVector("old", old);
             vector<int> even = centerSpread(s, i, i + 1);
             printVector("even", even);
-            cout << "============" << endl;
+            // cout << "============" << endl;
             vector<int> temp = even.at(1) > old.at(1) ? even : old;
             if (temp.at(1) > max.at(1)) {
                 max = temp;
@@ -55,14 +55,35 @@ private:
     }
 };
 
+void test1();
+
+void test2();
+
 int main() {
+
+    test1();
+    test2();
+
+    return 0;
+}
+
+
+void test1() {
+    puts("test1: ");
+    Solution1 solution;
+    string    s = "babad";
+    s = "cbbd";
+    string result = solution.longestPalindrome(s);
+    cout << "result : " << result << endl;
+}
+
+
+void test2() {
     Solution solution;
     string   s = "babad";
     s = "cbbd";
-    string    result = solution.longestPalindrome(s);
-    for (char &i: result) {
-        cerr << i;
-    }
-    cerr << endl;
-    return 0;
+    string result = solution.longestPalindrome(s);
+    cout << "result : " << result << endl;
+
+
 }
