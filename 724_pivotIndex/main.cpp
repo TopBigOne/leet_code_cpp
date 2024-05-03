@@ -23,6 +23,9 @@ public:
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto *solution = new Solution;
+    vector<int> temp   = {3, 6, 8, 90, 234, 444, 555, 666, 678,};
+    auto        result = solution->pivotIndex(temp);
+    std::cout << "result : " << result << std::endl;
     return 0;
 }
