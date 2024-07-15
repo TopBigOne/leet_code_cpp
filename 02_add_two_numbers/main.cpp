@@ -1,23 +1,15 @@
 #include <iostream>
 
+#include "Solution.h"
+
 
 using namespace std;
 
-struct ListNode {
-    int      val;
-    ListNode *next;
-
-    ListNode() : val(0), next(nullptr) {};
-
-    ListNode(int x) : val(x), next(nullptr) {};
-
-    ListNode(int x, ListNode *next) : val(x), next(next) {};
-};
 
 /**
  * https://leetcode.cn/problems/add-two-numbers/solutions/4375/liang-shu-xiang-jia-by-gpe3dbjds1/
  */
-class Solution {
+/*class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         auto     *head = new ListNode(-1);
@@ -82,7 +74,7 @@ public:
         return dummy->next;
 
     }
-};
+};*/
 
 int main() {
     auto *l1 = new ListNode(9);
