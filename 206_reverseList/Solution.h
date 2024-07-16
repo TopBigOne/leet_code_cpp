@@ -27,6 +27,8 @@ class Solution {
 
     ListNode *reverseList2(ListNode *head);
 
+    ListNode *reverseList3(ListNode *head);
+
 };
 
 

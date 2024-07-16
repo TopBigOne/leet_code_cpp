@@ -28,3 +28,16 @@ ListNode *Solution::reverseList2(ListNode *head) {
     }
     return pre;
 }
+
+ListNode *Solution::reverseList3(ListNode *head) {
+    ListNode *pre  = nullptr;
+    ListNode *curr = head;
+    while (curr != nullptr) {
+        ListNode *temp = curr->next;
+        curr->next = pre;
+        pre  = curr;
+        curr = temp;
+    }
+
+    return pre;
+}
