@@ -69,3 +69,34 @@ ListNode *Solution::addTwoNumbers2(ListNode *l1, ListNode *l2) {
 
 
 }
+
+ListNode *Solution::addTwoNumbers3(ListNode *l1, ListNode *l2) {
+    auto     *dummyNode = new ListNode(-1);
+    ListNode *head      = dummyNode;
+    bool     isCarry    = false;
+    int      sum        = 0;
+    while (l1 != nullptr || l2 != nullptr) {
+        sum = 0;
+        if (l1 != nullptr) {
+            sum += l1->val;
+            l1 = l1->next;
+        }
+
+        if (l2 != nullptr) {
+            sum += l2->val;
+            l2 = l2->next;
+        }
+        if (isCarry) {
+            sum++;
+        }
+        head->next = new ListNode(sum % 10);
+        head = head->next;
+
+        isCarry = sum >= 10;
+    }
+    if (isCarry) {
+        head->next = new ListNode(1);
+    }
+
+    return dummyNode->next;
+}

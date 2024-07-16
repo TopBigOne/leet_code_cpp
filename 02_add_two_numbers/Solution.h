@@ -21,11 +21,15 @@ typedef struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 } ListNode;
 
-using  namespace  std;
+using namespace std;
+
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2);
+
     ListNode *addTwoNumbers2(ListNode *l1, ListNode *l2);
+
+    ListNode *addTwoNumbers3(ListNode *l1, ListNode *l2);
 
 };
 
