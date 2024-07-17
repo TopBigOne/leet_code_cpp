@@ -32,6 +32,9 @@ public:
 
     int lengthOfLongestSubstring2(string s);
 
+    int lengthOfLongestSubstring3(string s);
+    int lengthOfLongestSubstring4(string s);
+
 };
 
 
